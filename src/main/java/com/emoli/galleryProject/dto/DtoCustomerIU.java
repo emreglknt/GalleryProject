@@ -14,8 +14,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class DtoCustomerIU {
-
-
+	
 	@NotNull
 	private String firstName;
 	

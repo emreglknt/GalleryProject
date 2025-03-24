@@ -55,7 +55,7 @@ public class AuthenticationServiceImpl implements IAuthenticationService{
 	private User createUser(AuthRequest input) {
 		User user = new User();
 		user.setCreateTime(new Date());
-		user.setUsername(input.getUsernName());
+		user.setUsername(input.getUsername());
 		user.setPassword(passwordEncoder.encode(input.getPassword()));
 		return user;
 		
@@ -94,10 +94,10 @@ public class AuthenticationServiceImpl implements IAuthenticationService{
 	public AuthResponse login(AuthRequest input) {
 		
 		try {
-			UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(input.getUsernName(), input.getPassword());
+			UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(input.getUsername(), input.getPassword());
 			authenticationProvider.authenticate(authenticationToken);
 			
-			Optional<User>  optUser = userRepository.findByUsername(input.getUsernName());
+			Optional<User>  optUser = userRepository.findByUsername(input.getUsername());
 			
 			String accessToken = jwtService.generateToken(optUser.get());
 			

@@ -5,16 +5,13 @@ import lombok.Data;
 
 @Data
 public class DtoGalleriestIU {
-
 	@NotNull
-	private Long galleristId;
+	private String firstName;
 	
 	@NotNull
-	private Long carId;
+	private String lastName;
 	
-		
 	@NotNull
 	private Long addressId;
-	
 	
 }

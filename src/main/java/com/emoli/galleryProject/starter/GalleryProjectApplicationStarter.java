@@ -7,8 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Component;
 
-
-@ComponentScan(basePackages =  {"com.emoli.galleryProject"})
+@ComponentScan(basePackages = {"com.emoli.galleryProject"})
 @EntityScan(basePackages =  {"com.emoli.galleryProject"})
 @EnableJpaRepositories(basePackages =  {"com.emoli.galleryProject"})
 @SpringBootApplication

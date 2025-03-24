@@ -1,6 +1,7 @@
 package com.emoli.galleryProject.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -34,6 +35,8 @@ public class SecurityConfig {
 	private static final String REGISTER ="/register";
 	private static final String REFRESH_TOKEN="/refreshToken";
 	
+	
+	@Bean
 	SecurityFilterChain filterChain (HttpSecurity http)throws Exception {
 		
 		http.csrf().disable()

@@ -24,14 +24,12 @@ public class GalleriestCarController extends RestBaseController implements IGall
 	
 	@PostMapping("/save")
 	@Override
-	public RootEntity<DtoGalleriestCar> saveGalleriestCar(@Valid @RequestBody DtoGalleriestCarIU dtoGalleriestCarIU) {
+	public RootEntity<DtoGalleriestCar> saveGalleriestCar(@RequestBody DtoGalleriestCarIU dtoGalleriestCarIU) {
 		
 		return ok(galleriestCarService.saveGalleriestCar(dtoGalleriestCarIU));
 	}
 
-	
-	
-	
-	
-	
 }
+
+
+

@@ -10,7 +10,7 @@ public class AuthRequest {
 
 	
 	@NotEmpty
-	private String usernName;
+	private String username;
 	
 	@NotEmpty
 	private String password;

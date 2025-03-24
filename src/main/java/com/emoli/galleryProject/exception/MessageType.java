@@ -16,7 +16,10 @@ public enum MessageType {
 	USERNAME_OR_PASSWORD_INVALID("1011", "Kullanıcı adı veya şifre hatalı"),
 	REFRESH_TOKEN_NOT_FOUND("1012","Refresh Token Bulunamadı"),
 	REFRESH_TOKEN_EXPIRED("1013","Refresh Token Expired"),
-	GENERAL_EXCEPTION("9999" , "genel bir hata oluştu");
+	CURRENY_RATES_IS_OCCURED("1010" , "döviz kuru alınamadı"),
+	GENERAL_EXCEPTION("9999" , "genel bir hata oluştu"),
+	CAR_STATUS_IS_ALREADY_SALED("2012","Araç daha önce satılmıştır!"),
+	CUSTOMER_AMOUNT_NOT_ENOUGH("1014","Bakiyeniz yeterli değildir.");
 	
 	
 	

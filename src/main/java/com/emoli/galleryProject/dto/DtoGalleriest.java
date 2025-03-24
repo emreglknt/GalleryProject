@@ -9,14 +9,10 @@ import lombok.Data;
 @Data
 public class DtoGalleriest extends DtoBase{
 
-	
-
 	private String firstName;
 	
 	private String lastName;
 	
-
 	private DtoAddress dtoAddress;
 
-	
 }
