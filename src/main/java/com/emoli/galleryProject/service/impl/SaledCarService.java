@@ -73,8 +73,7 @@ public class SaledCarService implements ISaledCarService {
 			BigDecimal customerUSDBakiye = converCustomerAmountUSD(customer);
 			
 			BigDecimal kalanUSDBakiye = customerUSDBakiye.subtract(car.getPrice());
-			
-			
+						
 			//tekrardan kalan parayı tl ye çeviriyoruz
 			CurrencyResponse currencyResponse = currencyService.getCurrency(DateUtils.getCurrentDate(new Date()), DateUtils.getCurrentDate(new Date()));
 		

@@ -23,6 +23,19 @@ public class RootEntity<T> {		//Dönen json formatını ayarlamayı sağlar
 		return rootEntity;
 	}
 	
+	
+	
+	
+	// void ama başarılı dönüş tipleri için overload ok metodu 
+	public static RootEntity<Void> ok() {
+	    RootEntity<Void> rootEntity = new RootEntity<>();
+	    rootEntity.setStatus(200);
+	    rootEntity.setPayload(null);
+	    rootEntity.setErrorMessage(null);
+	    return rootEntity;
+	}
+
+	
 	public static <T> RootEntity<T> error(String errorMessage){
 		RootEntity<T> rootEntity = new RootEntity<>();
 		rootEntity.setStatus(500);
