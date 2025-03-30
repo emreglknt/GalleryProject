@@ -1,6 +1,6 @@
 # 🚗 Gallerici Projesi
 
-Bu proje, Java Spring Boot ve PostgreSQL kullanarak geliştirilmiş bir gallerici uygulamasıdır. Müşteriler TL veya USSD ile hesaplarını kullanarak Merkez Bankası'ndan güncel döviz kurlarını çekip araç satın alabilir ve bütçelerini güncelleyebilirler.
+Bu proje, Java Spring Boot ve PostgreSQL kullanarak geliştirilmiş bir gallerici uygulamasıdır. Müşteriler TL veya USD ile hesaplarını kullanarak Merkez Bankası'ndan güncel döviz kurlarını çekip araç satın alabilir ve bütçelerini güncelleyebileckelri bir microservstir.
 
 ## 🔗 Özellikler
 
