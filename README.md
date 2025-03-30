@@ -6,7 +6,7 @@ Bu proje, Java Spring Boot ve PostgreSQL kullanarak geliştirilmiş bir galleric
 
 - 🚘 **Araç Listesi:** Gallericinin sahip olduğu araçları listeleme.
 - 💸 **Bütçe Yönetimi:** Müşterilerin bütçelerini görüntüleme ve güncelleme.
-- 🔄 **Güncel Kur Çekme:** Merkez Bankası DOVIZ-K kurlarını API üzerinden güncelleme.
+- 🔄 **Güncel Kur Çekme:** Merkez Bankası Döviz kurlarını API üzerinden güncelleme.
 - 🛒 **Araç Satın Alma:** Müşterinin bütçesine göre araç satın alma ve bütçenin güncellenmesi.
 - 📊 **Kur Dönüşümü:** TL ve döviz hesapları arasında dönüşüm yapabilme.
 
