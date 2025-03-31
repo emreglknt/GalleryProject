@@ -1,6 +1,7 @@
 package com.emoli.galleryProject.service.impl;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
@@ -64,6 +65,36 @@ public class GalleriestService implements IGalleriestService {
 		
 		return dtoGalleriest;
 
+	}
+
+
+
+
+	@Override
+	public List<DtoGalleriest> getAllGalleriests() {
+		
+		 List<Galleriest> galleriestList = galleriestRepository.findAll();
+		
+		
+		 return galleriestList.stream().map(entity->{
+			 
+			 DtoGalleriest dtoGalleriest = new DtoGalleriest();
+			 DtoAddress dtoAddress = new DtoAddress();
+			 
+			 BeanUtils.copyProperties(entity, dtoGalleriest);
+			 
+			 if(entity.getAddress() !=null) {
+				 BeanUtils.copyProperties(entity.getAddress(), dtoAddress);
+				 dtoGalleriest.setDtoAddress(dtoAddress);
+			 }
+			 
+			 return dtoGalleriest;
+			 
+		 }).toList();
+		 
+		 
+		 
+		
 	}
 
 	

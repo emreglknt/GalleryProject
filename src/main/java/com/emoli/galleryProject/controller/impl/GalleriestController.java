@@ -1,6 +1,9 @@
 package com.emoli.galleryProject.controller.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,8 +33,23 @@ public class GalleriestController extends RestBaseController implements IGalleri
 	public RootEntity<DtoGalleriest> saveGalleriest(@Valid @RequestBody	DtoGalleriestIU dtoGalleriestIU) {
 		
 		return ok(galleriestService.saveGalleriest(dtoGalleriestIU));
-		
-		
+
 	}
 
+	
+
+	@GetMapping("/list-all")
+	@Override
+	public RootEntity<List<DtoGalleriest>> getAllGalleriests() {
+		
+		List<DtoGalleriest> dtoGalleriestsList = galleriestService.getAllGalleriests();
+		
+		return ok(dtoGalleriestsList);
+	
+	}
+
+	
+	 
+	
+	
 }
